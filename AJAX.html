@@ -1,0 +1,18 @@
+$.ajax({
+    url :'https://g0b6ae160c0c291-box.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/box/box',
+    data : {id : 123},
+    type : GET',
+    dataType : json',
+
+    success : function(json) {
+	$('<h1/´>').text(json.title).appendTo('body');
+	$('<div class="content"/>')
+	     .html(json.html).appendTo('body');
+	},
+	error : function(xmr, status){
+	    alert('ha sucedido un problema');
+	},
+	complete : function (xhr, status) {
+	    alert('peticion realizada');
+	}
+	);
